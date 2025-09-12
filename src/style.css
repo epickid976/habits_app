@@ -1,4 +1,6 @@
 /* Minimal base (feel free to swap for Tailwind/reset later) */
+@import "tailwindcss";
+
 :root {
   color-scheme: light dark;
 }

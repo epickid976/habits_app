@@ -61,7 +61,19 @@ function toggleMobile() {
 
   <!-- Main content area -->
   <main id="main" class="main-content">
-    <RouterView />
+    <RouterView v-slot="{ Component, route }">
+      <Transition
+        enter-from-class="opacity-0 translate-y-2"
+        enter-active-class="transition-all duration-300 ease-out"
+        enter-to-class="opacity-100 translate-y-0"
+        leave-from-class="opacity-100 translate-y-0"
+        leave-active-class="transition-all duration-200 ease-in"
+        leave-to-class="opacity-0 translate-y-1"
+        mode="out-in"
+      >
+        <component :is="Component" :key="route.fullPath" />
+      </Transition>
+    </RouterView>
   </main>
 </template>
 
