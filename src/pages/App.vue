@@ -49,6 +49,9 @@ onUnmounted(() => {
         <li>
           <RouterLink to="/about" class="link" active-class="active">About</RouterLink>
         </li>
+        <li>
+          <RouterLink to="/habits" class="link" active-class="active">Habits</RouterLink>
+        </li>
       </ul>
 
       <!-- Mobile hamburger -->
@@ -68,9 +71,10 @@ onUnmounted(() => {
       </button>
 
       <!-- Mobile panel -->
-<ul id="primary-nav" class="links mobile layered-glass" :class="{ 'mobile-open': mobileOpen }">
+      <ul id="primary-nav" class="links mobile layered-glass" :class="{ 'mobile-open': mobileOpen }">
         <li><RouterLink to="/" class="link" exact-active-class="active">Home</RouterLink></li>
         <li><RouterLink to="/about" class="link">About</RouterLink></li>
+        <li> <RouterLink to="/habits" class="link">Habits</RouterLink></li>
       </ul>
     </div>
   </nav>
